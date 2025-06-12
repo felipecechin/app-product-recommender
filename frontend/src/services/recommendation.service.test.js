@@ -1,5 +1,5 @@
-import recommendationService from './recommendation.service';
 import mockProducts from '../mocks/mockProducts';
+import recommendationService from './recommendation.service';
 
 describe('recommendationService', () => {
   test('Retorna recomendação correta para SingleProduct com base nas preferências selecionadas', () => {

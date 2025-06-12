@@ -1,6 +1,7 @@
 // useRecommendations.js
 
 import { useState } from 'react';
+
 import recommendationService from '../services/recommendation.service';
 
 function useRecommendations(products) {
