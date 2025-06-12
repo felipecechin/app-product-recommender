@@ -3,11 +3,11 @@ import Form from './components/Form/Form';
 import RecommendationList from './components/RecommendationList/RecommendationList';
 
 function App() {
-  const [recommendations, setRecommendations ] = useState([])
+  const [recommendations, setRecommendations] = useState([])
 
-  /**
-   * Dadas atualizações no formulário, necessário atualizar a lista de recomendações
-   */
+  function handleUpdateRecommendations(newRecommendations) {
+    setRecommendations(newRecommendations);
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
@@ -19,7 +19,9 @@ function App() {
           </p>
         </div>
         <div>
-          <Form />
+          <Form
+            onUpdateRecommendations={handleUpdateRecommendations}
+          />
         </div>
         <div>
           <RecommendationList recommendations={recommendations} />

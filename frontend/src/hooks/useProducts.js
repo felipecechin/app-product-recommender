@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import getProducts from '../services/product.service';
+import productService from '../services/product.service';
 
 const useProducts = () => {
   const [preferences, setPreferences] = useState([]);
@@ -9,7 +9,7 @@ const useProducts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const products = await getProducts();
+        const products = await productService.getProducts();
         const allPreferences = [];
         const allFeatures = [];
 

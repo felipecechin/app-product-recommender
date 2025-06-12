@@ -12,4 +12,8 @@ const getProducts = async () => {
   }
 };
 
-export default getProducts;
+const productService = {
+  getProducts
+};
+
+export default productService;
