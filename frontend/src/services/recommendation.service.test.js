@@ -80,4 +80,53 @@ describe('recommendationService', () => {
     expect(recommendations).toHaveLength(1);
     expect(recommendations[0].name).toBe('RD Conversas');
   });
+
+  test('Retorna zero elementos se nenhuma preferência ou funcionalidade for selecionada e tipo de recomendação for SingleProduct', () => {
+    const formData = {
+      selectedRecommendationType: 'SingleProduct',
+    };
+
+    const recommendations = recommendationService.getRecommendations(
+      formData,
+      mockProducts
+    );
+
+    expect(recommendations).toHaveLength(0);
+  });
+
+  test('Retorna zero elementos se nenhuma preferência ou funcionalidade for selecionada e tipo de recomendação for MultipleProducts', () => {
+    const formData = {
+      selectedRecommendationType: 'MultipleProducts',
+    };
+
+    const recommendations = recommendationService.getRecommendations(
+      formData,
+      mockProducts
+    );
+
+    expect(recommendations).toHaveLength(0);
+  });
+
+  test('Dispara erro se tipo de recomendação não for especificado', () => {
+    const formData = {
+      selectedPreferences: ['Integração com chatbots'],
+      selectedFeatures: ['Chat ao vivo e mensagens automatizadas'],
+    };
+
+    expect(() => {
+      recommendationService.getRecommendations(formData, mockProducts);
+    }).toThrow('Tipo de recomendação não especificado');
+  });
+
+  test('Dispara erro se tipo de recomendação for inválido', () => {
+    const formData = {
+      selectedPreferences: ['Integração com chatbots'],
+      selectedFeatures: ['Chat ao vivo e mensagens automatizadas'],
+      selectedRecommendationType: 'InvalidType',
+    };
+
+    expect(() => {
+      recommendationService.getRecommendations(formData, mockProducts);
+    }).toThrow('Tipo de recomendação inválido');
+  });
 });
