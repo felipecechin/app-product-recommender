@@ -20,8 +20,8 @@ function Preferences({
   };
 
   return (
-    <div className="mb-4">
-      <h2 className="text-lg font-bold mb-2">Preferências:</h2>
+    <div className="bg-white rounded-md shadow-md p-4 flex flex-col gap-4">
+      <h2 className="text-lg font-bold">⚙ Preferências:</h2>
       <ul>
         {preferences.map((preference, index) => (
           <li key={index} className="mb-2">
