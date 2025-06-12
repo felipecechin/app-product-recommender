@@ -11,7 +11,6 @@ const getRecommendations = (() => {
     let phraseProductMap = catalogCache.get(products);
 
     if (!phraseProductMap) {
-      console.debug('Building phraseProductMap for products:', products);
       phraseProductMap = new Map(); // frase completa → objeto-produto
 
       products.forEach(product => {
@@ -27,10 +26,18 @@ const getRecommendations = (() => {
      * 2. Normaliza dados vindos do formulário
      * ============================================================== */
     const {
-      selectedPreferences : rawPreferences = [],
-      selectedFeatures : rawFeatures = [],
-      selectedRecommendationType: recommendationType = 'MultipleProducts',
+      selectedPreferences: rawPreferences = [],
+      selectedFeatures: rawFeatures = [],
+      selectedRecommendationType: recommendationType = '',
     } = formData || {};
+
+    if (recommendationType === '') {
+      throw new Error('Tipo de recomendação não especificado');
+    }
+
+    if (recommendationType !== 'SingleProduct' && recommendationType !== 'MultipleProducts') {
+      throw new Error('Tipo de recomendação inválido');
+    }
 
     const preferences = Array.isArray(rawPreferences) ? rawPreferences : [];
     const features = Array.isArray(rawFeatures) ? rawFeatures : [];
