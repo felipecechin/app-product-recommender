@@ -3,13 +3,13 @@ import Radio from '../../shared/Radio';
 
 function RecommendationType({ onRecommendationTypeChange }) {
   return (
-    <div className="bg-white rounded-md shadow-md p-4 flex flex-col gap-4">
-      <h2 className="text-lg font-bold">🎯 Tipo de Recomendação:</h2>
-      <div className="flex items-center gap-10">
+    <div className='bg-white rounded-md shadow-md p-4 flex flex-col gap-4'>
+      <h2 className='text-lg font-bold'>🎯 Tipo de Recomendação:</h2>
+      <div className='flex items-center gap-10'>
         <div className='flex items-center'>
           <Radio
-            name="recommendationType"
-            value="SingleProduct"
+            name='recommendationType'
+            value='SingleProduct'
             onChange={() => onRecommendationTypeChange('SingleProduct')}
           >
             Produto Único
@@ -17,8 +17,8 @@ function RecommendationType({ onRecommendationTypeChange }) {
         </div>
         <div className='flex items-center'>
           <Radio
-            name="recommendationType"
-            value="MultipleProducts"
+            name='recommendationType'
+            value='MultipleProducts'
             onChange={() => onRecommendationTypeChange('MultipleProducts')}
           >
             Múltiplos Produtos

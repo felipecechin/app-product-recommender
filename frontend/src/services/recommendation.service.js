@@ -28,14 +28,17 @@ const getRecommendations = (() => {
     const {
       selectedPreferences: rawPreferences = [],
       selectedFeatures: rawFeatures = [],
-      selectedRecommendationType: recommendationType = '',
+      selectedRecommendationType: recommendationType = ''
     } = formData || {};
 
     if (recommendationType === '') {
       throw new Error('Tipo de recomendação não especificado');
     }
 
-    if (recommendationType !== 'SingleProduct' && recommendationType !== 'MultipleProducts') {
+    if (
+      recommendationType !== 'SingleProduct' &&
+      recommendationType !== 'MultipleProducts'
+    ) {
       throw new Error('Tipo de recomendação inválido');
     }
 
@@ -60,7 +63,8 @@ const getRecommendations = (() => {
       scores.set(id, entry);
 
       if (singleMode) {
-        const appearsLater = entry.score === topScore && id > (chosenProduct?.id ?? -1);
+        const appearsLater =
+          entry.score === topScore && id > (chosenProduct?.id ?? -1);
 
         // Se o score é maior ou aparece depois, escolhe este produto
         if (entry.score > topScore || appearsLater) {

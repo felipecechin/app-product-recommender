@@ -17,7 +17,7 @@ const useProducts = () => {
 
         setProducts(products);
 
-        products.forEach((product) => {
+        products.forEach(product => {
           const productPreferences = product.preferences
             .sort(() => Math.random() - 0.5)
             .slice(0, 2);

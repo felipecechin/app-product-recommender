@@ -6,7 +6,7 @@ describe('recommendationService', () => {
     const formData = {
       selectedPreferences: ['Integração com chatbots'],
       selectedFeatures: ['Chat ao vivo e mensagens automatizadas'],
-      selectedRecommendationType: 'SingleProduct',
+      selectedRecommendationType: 'SingleProduct'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -23,13 +23,13 @@ describe('recommendationService', () => {
       selectedPreferences: [
         'Integração fácil com ferramentas de e-mail',
         'Personalização de funis de vendas',
-        'Automação de marketing',
+        'Automação de marketing'
       ],
       selectedFeatures: [
         'Rastreamento de interações com clientes',
-        'Rastreamento de comportamento do usuário',
+        'Rastreamento de comportamento do usuário'
       ],
-      selectedRecommendationType: 'MultipleProducts',
+      selectedRecommendationType: 'MultipleProducts'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -38,9 +38,9 @@ describe('recommendationService', () => {
     );
 
     expect(recommendations).toHaveLength(2);
-    expect(recommendations.map((product) => product.name)).toEqual([
+    expect(recommendations.map(product => product.name)).toEqual([
       'RD Station CRM',
-      'RD Station Marketing',
+      'RD Station Marketing'
     ]);
   });
 
@@ -48,13 +48,13 @@ describe('recommendationService', () => {
     const formData = {
       selectedPreferences: [
         'Integração fácil com ferramentas de e-mail',
-        'Automação de marketing',
+        'Automação de marketing'
       ],
       selectedFeatures: [
         'Rastreamento de interações com clientes',
-        'Rastreamento de comportamento do usuário',
+        'Rastreamento de comportamento do usuário'
       ],
-      selectedRecommendationType: 'SingleProduct',
+      selectedRecommendationType: 'SingleProduct'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -68,8 +68,11 @@ describe('recommendationService', () => {
 
   test('Retorna o último match em caso de empate para SingleProduct', () => {
     const formData = {
-      selectedPreferences: ['Automação de marketing', 'Integração com chatbots'],
-      selectedRecommendationType: 'SingleProduct',
+      selectedPreferences: [
+        'Automação de marketing',
+        'Integração com chatbots'
+      ],
+      selectedRecommendationType: 'SingleProduct'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -83,7 +86,7 @@ describe('recommendationService', () => {
 
   test('Retorna zero elementos se nenhuma preferência ou funcionalidade for selecionada e tipo de recomendação for SingleProduct', () => {
     const formData = {
-      selectedRecommendationType: 'SingleProduct',
+      selectedRecommendationType: 'SingleProduct'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -96,7 +99,7 @@ describe('recommendationService', () => {
 
   test('Retorna zero elementos se nenhuma preferência ou funcionalidade for selecionada e tipo de recomendação for MultipleProducts', () => {
     const formData = {
-      selectedRecommendationType: 'MultipleProducts',
+      selectedRecommendationType: 'MultipleProducts'
     };
 
     const recommendations = recommendationService.getRecommendations(
@@ -110,7 +113,7 @@ describe('recommendationService', () => {
   test('Dispara erro se tipo de recomendação não for especificado', () => {
     const formData = {
       selectedPreferences: ['Integração com chatbots'],
-      selectedFeatures: ['Chat ao vivo e mensagens automatizadas'],
+      selectedFeatures: ['Chat ao vivo e mensagens automatizadas']
     };
 
     expect(() => {
@@ -122,7 +125,7 @@ describe('recommendationService', () => {
     const formData = {
       selectedPreferences: ['Integração com chatbots'],
       selectedFeatures: ['Chat ao vivo e mensagens automatizadas'],
-      selectedRecommendationType: 'InvalidType',
+      selectedRecommendationType: 'InvalidType'
     };
 
     expect(() => {
