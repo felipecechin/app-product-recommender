@@ -1,4 +1,4 @@
-import Radio from '../../../shared/Radio';
+import Radio from '../../../base/Radio';
 
 export function RecommendationType({ onRecommendationTypeChange }) {
   return (

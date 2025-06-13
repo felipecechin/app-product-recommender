@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Checkbox from '../../../shared/Checkbox';
+import Checkbox from '../../../base/Checkbox';
 
 export function Features({ features, selectedFeatures = [], onFeatureChange }) {
   const [currentFeatures, setCurrentFeatures] = useState(selectedFeatures);

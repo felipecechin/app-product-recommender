@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
+import LogoRdStation from './components/base/LogoRdStation';
 import Form from './components/Form';
 import RecommendationList from './components/RecommendationList';
-import LogoRdStation from './components/shared/LogoRdStation';
 
 function App() {
   const [recommendations, setRecommendations] = useState([]);

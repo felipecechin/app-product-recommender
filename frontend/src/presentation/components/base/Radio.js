@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Radio({ children, ...props }) {
   return (
     <label className='flex items-center'>

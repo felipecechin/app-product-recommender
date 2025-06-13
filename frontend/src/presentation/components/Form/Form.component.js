@@ -1,6 +1,6 @@
-import { useProducts } from '../../data/modules/products';
-import { useRecommendations } from '../../data/modules/recommendations';
-import { useForm } from '../../shared/hooks';
+import { useProducts } from '../../../data/modules/products';
+import { useRecommendations } from '../../../data/modules/recommendations';
+import { useForm } from '../../../shared/hooks';
 import { Features, Preferences, RecommendationType } from './Fields';
 import SubmitButton from './SubmitButton';
 

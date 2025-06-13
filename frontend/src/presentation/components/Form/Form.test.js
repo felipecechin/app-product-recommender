@@ -2,24 +2,24 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Form } from './Form.component';
 
-jest.mock('../../shared/hooks', () => ({
+jest.mock('../../../shared/hooks', () => ({
   __esModule: true,
   useForm: jest.fn()
 }));
 
-jest.mock('../../data/modules/recommendations', () => ({
+jest.mock('../../../data/modules/recommendations', () => ({
   __esModule: true,
   useRecommendations: jest.fn()
 }));
 
-jest.mock('../../data/modules/products', () => ({
+jest.mock('../../../data/modules/products', () => ({
   __esModule: true,
   useProducts: jest.fn()
 }));
 
-import { useProducts } from '../../data/modules/products';
-import { useRecommendations } from '../../data/modules/recommendations';
-import { useForm } from '../../shared/hooks';
+import { useProducts } from '../../../data/modules/products';
+import { useRecommendations } from '../../../data/modules/recommendations';
+import { useForm } from '../../../shared/hooks';
 
 describe('Componente: Form', () => {
   const mockGetRecommendations = jest.fn();

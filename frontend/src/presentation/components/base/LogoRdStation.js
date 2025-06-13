@@ -1,5 +1,3 @@
-import React from 'react';
-
 function LogoRdStation(props) {
   return (
     <svg
