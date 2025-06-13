@@ -1,6 +1,4 @@
-import React from 'react';
-
-function SubmitButton({
+export function SubmitButton({
   text,
   hasSelectedRecommendationType,
   hasSelectedAnyPreferenceOrFeature
@@ -26,5 +24,3 @@ function SubmitButton({
     </div>
   );
 }
-
-export default SubmitButton;

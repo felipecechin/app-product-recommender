@@ -6,7 +6,7 @@ import useForm from '../../hooks/useForm';
 import useProducts from '../../hooks/useProducts';
 import useRecommendations from '../../hooks/useRecommendations';
 import { Features, Preferences, RecommendationType } from './Fields';
-import { SubmitButton } from './SubmitButton';
+import SubmitButton from './SubmitButton';
 
 function Form({ onUpdateRecommendations }) {
   const { preferences, features, products, error, isLoading } = useProducts();

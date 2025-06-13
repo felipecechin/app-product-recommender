@@ -1,3 +1,3 @@
-import SubmitButton from './SubmitButton';
+import { SubmitButton } from './SubmitButton.component';
 
-export { SubmitButton };
+export default SubmitButton;
