@@ -116,7 +116,7 @@ A partir da aplicação original, foram feitas melhorias significativas no layou
 
 - **Responsividade**: O layout foi adaptado para funcionar bem em diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops.
 - **Estilização com Tailwind CSS**: Utilizando o Tailwind CSS, o design foi aprimorado para ser mais moderno e intuitivo, com foco na usabilidade.
-- **Experiência do usuário**: Foi adicionado feedback visual ao usuário, como estado de carregamento e mensagens, para melhorar a interação com o formulário, e as recomendações e outros ajustes de usabilidade.
+- **Experiência do usuário**: Implementados feedbacks visuais (como loading e mensagens), além de melhorias de usabilidade para otimizar a interação com o formulário e as recomendações.
 
 ## Melhorias futuras
 
@@ -126,7 +126,7 @@ A partir da aplicação original, foram feitas melhorias significativas no layou
 - Adicionar alias, como `@components`, `@hooks`, etc., para facilitar os imports e melhorar a legibilidade do código.
 - Fazer a migração do react-scripts para o Vite, que é mais leve e rápido, melhorando a performance do projeto.
 - Atualizar o Tailwind CSS para a versão 4.
-- Ampliar ainda mais a cobertura dos testes unitários e adicionar testes de integração.
+- Ampliar ainda mais a cobertura dos testes unitários e adicionar testes de integração com Cypress.
 
 ## Formatação e lint de código
 
