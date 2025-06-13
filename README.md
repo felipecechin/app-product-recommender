@@ -12,7 +12,7 @@ Este projeto utiliza as seguintes tecnologias principais:
 
 ## Versão do Node.js
 
-A versão do Node.js utilizada foi a 20.12.1. É recomendável utilizar a mesma versão ou uma versão compatível para evitar problemas de compatibilidade.
+A versão do Node.js utilizada foi a 20.12.1, juntamente com o Yarn como gerenciador de pacotes. É recomendável utilizar a mesma versão ou uma versão compatível para evitar problemas de compatibilidade.
 
 ## Como Executar
 
@@ -109,6 +109,14 @@ Foram implementados **8 arquivos de testes unitários**, cobrindo os principais 
 - [`useProducts.test.js`](frontend/src/data/modules/products/useCases/useProducts.test.js)
 
 Todos os testes estão passando ✅
+
+## Layout e experiência do usuário
+
+A partir da aplicação original, foram feitas melhorias significativas no layout e na experiência do usuário:
+
+- **Responsividade**: O layout foi adaptado para funcionar bem em diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops.
+- **Estilização com Tailwind CSS**: Utilizando o Tailwind CSS, o design foi aprimorado para ser mais moderno e intuitivo, com foco na usabilidade.
+- **Experiência do usuário**: Foi adicionado feedback visual ao usuário, como estado de carregamento e mensagens, para melhorar a interação com o formulário, e as recomendações e outros ajustes de usabilidade.
 
 ## Melhorias futuras
 
