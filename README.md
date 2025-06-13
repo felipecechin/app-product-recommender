@@ -83,6 +83,27 @@ src/
    Contém a **lógica de negócio responsável por gerar as recomendações** com base nas escolhas feitas pelo usuário.  
    ✅ Serviço isolado e testado, preparado para futura evolução (ex: novas regras ou critérios de recomendação).
 
+### Sobre a função que gera as recomendações
+
+Optei por **indexar o catálogo (produtos) em um `Map`/`WeakMap` – estruturas que o JavaScript implementa como _hash tables_**.  
+Dessa forma, cada frase (feature ou preference) se torna uma chave única que aponta diretamente para o produto correspondente em **O(1)**.
+
+| Etapa                    | Complexidade                            | O que acontece                                                                                        |
+| ------------------------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Construção do índice** | **O(N)** · executada apenas **uma vez** | Percorremos o array de produtos, geramos o hash para cada frase e armazenamos no `Map`.               |
+| **Recomendação**         | **O(k)** (k = n° de itens selecionados) | Buscamos as chaves no hash table e pontuamos; não há loop sobre o catálogo completo em cada consulta. |
+
+```text
+Busca não otimizada (varrer catálogo inteiro a cada submit):  O(N)  por chamada
+Implementação com hash table: O(N) uma única vez  +  O(k) por chamada
+```
+
+#### WeakMap e closure
+
+Mantenho o índice, em que a chave é o array de produtos, em um **WeakMap** que vive dentro de um **closure** (gerado por um IIFE, função anônima declarada e invocada).  
+_Closure_ significa que as variáveis daquele escopo permanecem na memória enquanto alguma função interna ainda as usa.  
+Já o `WeakMap` garante que, quando o array de produtos perder a referência, o garbage collector libera seu espaço, assim temos cache persistente, sem variáveis globais e sem vazamento de memória.
+
 ## Convenções de Componentes
 
 Para manter consistência e escalabilidade, cada componente possui sua própria pasta contendo:
