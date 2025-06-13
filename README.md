@@ -99,6 +99,8 @@ Isso abre possibilidades para futuras expansões, como a adição de estilos esp
 - Adicionar React Query para otimizar requisições para a API e melhorar o gerenciamento de estado.
 - Como cada componente já está organizado em sua própria pasta, é possível implementar algum pattern como Container/Presentational ou Smart/Dumb Components para separar lógica de apresentação.
 - Adicionar alias, como `@components`, `@hooks`, etc., para facilitar os imports e melhorar a legibilidade do código.
+- Fazer a migração do react-scripts para o Vite, que é mais leve e rápido, melhorando a performance do projeto.
+- Atualizar o Tailwind CSS para a versão 4.
 
 ## Formatação e lint de código
 
