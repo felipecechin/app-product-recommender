@@ -7,9 +7,9 @@ jest.mock('../../hooks/useForm', () => ({
   default: jest.fn()
 }));
 
-jest.mock('../../hooks/useRecommendations', () => ({
+jest.mock('../../data/modules/recommendations', () => ({
   __esModule: true,
-  default: jest.fn()
+  useRecommendations: jest.fn()
 }));
 
 jest.mock('../../data/modules/products', () => ({
@@ -18,8 +18,8 @@ jest.mock('../../data/modules/products', () => ({
 }));
 
 import { useProducts } from '../../data/modules/products';
+import { useRecommendations } from '../../data/modules/recommendations';
 import useForm from '../../hooks/useForm';
-import useRecommendations from '../../hooks/useRecommendations';
 
 describe('Componente: Form', () => {
   const mockGetRecommendations = jest.fn();

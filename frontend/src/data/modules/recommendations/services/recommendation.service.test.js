@@ -1,4 +1,4 @@
-import mockProducts from '../data/modules/products/mocks/mockProducts';
+import mockProducts from '../../products/mocks/mockProducts';
 import recommendationService from './recommendation.service';
 
 describe('recommendationService', () => {
