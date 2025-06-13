@@ -1,14 +1,10 @@
-// Form.js
-
-import React from 'react';
-
 import useForm from '../../hooks/useForm';
 import useProducts from '../../hooks/useProducts';
 import useRecommendations from '../../hooks/useRecommendations';
 import { Features, Preferences, RecommendationType } from './Fields';
 import SubmitButton from './SubmitButton';
 
-function Form({ onUpdateRecommendations }) {
+export function Form({ onUpdateRecommendations }) {
   const { preferences, features, products, error, isLoading } = useProducts();
   const { formData, handleChange } = useForm({
     selectedPreferences: [],
@@ -42,7 +38,10 @@ function Form({ onUpdateRecommendations }) {
 
   if (isLoading) {
     return (
-      <div className='grid min-h-[200px] w-full place-items-center'>
+      <div
+        role='status'
+        className='grid min-h-[200px] w-full place-items-center'
+      >
         <svg
           className='text-gray-300 animate-spin w-8 h-8'
           viewBox='0 0 64 64'
@@ -100,5 +99,3 @@ function Form({ onUpdateRecommendations }) {
     </form>
   );
 }
-
-export default Form;
