@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Form } from './Form.component';
 
-jest.mock('../../hooks/useProducts', () => ({
+jest.mock('../../hooks/useForm', () => ({
   __esModule: true,
   default: jest.fn()
 }));
@@ -12,13 +12,13 @@ jest.mock('../../hooks/useRecommendations', () => ({
   default: jest.fn()
 }));
 
-jest.mock('../../hooks/useForm', () => ({
+jest.mock('../../data/modules/products', () => ({
   __esModule: true,
-  default: jest.fn()
+  useProducts: jest.fn()
 }));
 
+import { useProducts } from '../../data/modules/products';
 import useForm from '../../hooks/useForm';
-import useProducts from '../../hooks/useProducts';
 import useRecommendations from '../../hooks/useRecommendations';
 
 describe('Componente: Form', () => {

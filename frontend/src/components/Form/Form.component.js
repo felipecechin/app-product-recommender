@@ -1,5 +1,5 @@
+import { useProducts } from '../../data/modules/products';
 import useForm from '../../hooks/useForm';
-import useProducts from '../../hooks/useProducts';
 import useRecommendations from '../../hooks/useRecommendations';
 import { Features, Preferences, RecommendationType } from './Fields';
 import SubmitButton from './SubmitButton';
