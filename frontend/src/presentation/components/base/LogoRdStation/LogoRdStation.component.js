@@ -1,4 +1,4 @@
-function LogoRdStation(props) {
+export function LogoRdStation(props) {
   return (
     <svg
       id='Layer_1'
@@ -36,5 +36,3 @@ function LogoRdStation(props) {
     </svg>
   );
 }
-
-export default LogoRdStation;
