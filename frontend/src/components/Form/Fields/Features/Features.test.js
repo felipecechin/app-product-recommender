@@ -3,20 +3,6 @@ import userEvent from '@testing-library/user-event';
 
 import { Features } from './Features.component';
 
-jest.mock('../../../shared/Checkbox', () => ({
-  __esModule: true,
-  default: ({ children, checked, onChange }) => (
-    <label>
-      <input
-        type='checkbox'
-        checked={checked}
-        onChange={onChange}
-      />
-      {children}
-    </label>
-  )
-}));
-
 describe('Componente: Features', () => {
   it('Deve chamar a função de callback ao clicar em uma opção', () => {
     const features = ['Feature 1', 'Feature 2', 'Feature 3'];

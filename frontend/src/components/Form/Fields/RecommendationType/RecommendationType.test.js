@@ -3,21 +3,6 @@ import userEvent from '@testing-library/user-event';
 
 import { RecommendationType } from './RecommendationType.component';
 
-jest.mock('../../../shared/Radio', () => ({
-  __esModule: true,
-  default: ({ children, value, onChange }) => (
-    <label>
-      <input
-        type='radio'
-        name='recommendationType'
-        value={value}
-        onChange={onChange}
-      />
-      {children}
-    </label>
-  )
-}));
-
 describe('Componente: RecommendationType', () => {
   it('Deve chamar a função de callback com "SingleProduct" ao clicar na primeira opção', () => {
     const onRecommendationTypeChange = jest.fn();

@@ -3,20 +3,6 @@ import userEvent from '@testing-library/user-event';
 
 import { Preferences } from './Preferences.component';
 
-jest.mock('../../../shared/Checkbox', () => ({
-  __esModule: true,
-  default: ({ children, checked, onChange }) => (
-    <label>
-      <input
-        type='checkbox'
-        checked={checked}
-        onChange={onChange}
-      />
-      {children}
-    </label>
-  )
-}));
-
 describe('Componente: Preferences', () => {
   it('Deve adicionar uma nova preferência ao clicar', () => {
     const preferences = ['Preference 1', 'Preference 2', 'Preference 3'];
