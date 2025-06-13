@@ -93,6 +93,23 @@ Para manter consistência e escalabilidade, cada componente possui sua própria 
 
 Isso abre possibilidades para futuras expansões, como a adição de estilos específicos, arquivo de tipagens (ao inserir TypeScript) e a implementação de algum pattern como Container/Presentational ou Smart/Dumb Components.
 
+## Testes unitários
+
+Foram implementados **8 arquivos de testes unitários**, cobrindo os principais códigos do projeto. Os testes garantem que a **lógica de recomendação** funcione corretamente e que os **componentes renderizem conforme esperado**.
+
+### Arquivos de testes:
+
+- [`SubmitButton.test.js`](frontend/src/presentation/components/Form/SubmitButton/SubmitButton.test.js)
+- [`Form.test.js`](frontend/src/presentation/components/Form/Form.test.js)
+- [`RecommendationType.test.js`](frontend/src/presentation/components/Form/Fields/RecommendationType/RecommendationType.test.js)
+- [`Preferences.test.js`](frontend/src/presentation/components/Form/Fields/Preferences/Preferences.test.js)
+- [`Features.test.js`](frontend/src/presentation/components/Form/Fields/Features/Features.test.js)
+- [`RecommendationList.test.js`](frontend/src/presentation/components/RecommendationList/RecommendationList.test.js)
+- [`recommendation.service.test.js`](frontend/src/data/modules/recommendations/services/recommendation.service.test.js)
+- [`useProducts.test.js`](frontend/src/data/modules/products/useCases/useProducts.test.js)
+
+Todos os testes estão passando ✅
+
 ## Melhorias futuras
 
 - Adicionar TypeScript para melhorar consistência do código e facilitar a manutenção.
@@ -101,6 +118,7 @@ Isso abre possibilidades para futuras expansões, como a adição de estilos esp
 - Adicionar alias, como `@components`, `@hooks`, etc., para facilitar os imports e melhorar a legibilidade do código.
 - Fazer a migração do react-scripts para o Vite, que é mais leve e rápido, melhorando a performance do projeto.
 - Atualizar o Tailwind CSS para a versão 4.
+- Ampliar ainda mais a cobertura dos testes unitários e adicionar testes de integração.
 
 ## Formatação e lint de código
 
