@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import Form from './components/Form';
-import RecommendationList from './components/RecommendationList/RecommendationList';
+import RecommendationList from './components/RecommendationList';
 import LogoRdStation from './components/shared/LogoRdStation';
 
 function App() {

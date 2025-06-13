@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
-const RecommendationList = forwardRef(({ recommendations }, ref) => {
+export const RecommendationList = forwardRef(({ recommendations }, ref) => {
   if (recommendations.length === 0) {
     return null;
   }
@@ -31,5 +31,3 @@ const RecommendationList = forwardRef(({ recommendations }, ref) => {
     </div>
   );
 });
-
-export default RecommendationList;
