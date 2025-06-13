@@ -1,8 +1,6 @@
-import React from 'react';
+import Radio from '../../../shared/Radio';
 
-import Radio from '../../shared/Radio';
-
-function RecommendationType({ onRecommendationTypeChange }) {
+export function RecommendationType({ onRecommendationTypeChange }) {
   return (
     <div className='bg-white rounded-md shadow-md p-4 flex flex-col gap-4'>
       <h2 className='text-lg font-bold'>🎯 Tipo de Recomendação:</h2>
@@ -29,5 +27,3 @@ function RecommendationType({ onRecommendationTypeChange }) {
     </div>
   );
 }
-
-export default RecommendationType;
