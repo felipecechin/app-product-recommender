@@ -1,10 +1,8 @@
-// Preferences.js
+import { useState } from 'react';
 
-import React, { useState } from 'react';
+import Checkbox from '../../../shared/Checkbox';
 
-import Checkbox from '../../shared/Checkbox';
-
-function Preferences({
+export function Preferences({
   preferences,
   selectedPreferences = [],
   onPreferenceChange
@@ -44,5 +42,3 @@ function Preferences({
     </div>
   );
 }
-
-export default Preferences;
