@@ -132,6 +132,10 @@ A partir da aplicação original, foram feitas melhorias significativas no layou
 
 Para garantir a consistência e padronização do código, foram integrados o Prettier e o ESLint, que foi atualizado da versão 8 para a versão 9. O plugin do Prettier foi incorporado ao ESLint, assegurando que as regras de formatação sejam aplicadas automaticamente ao executar o `eslint --fix`. Além disso, foi adicionado um plugin para ordenar os imports de forma automática, contribuindo para uma base de código mais limpa e organizada.
 
+## Considerações finais
+
+Procurei focar os esforços na implementação da lógica de recomendação e os testes unitários associados, garantindo que o sistema funcione conforme os critérios de aceite. Também foquei em melhorar a experiência do usuário e o layout, utilizando o Tailwind CSS para estilização. Fiz a implementação de mais testes unitários para garantir a qualidade do código e a confiabilidade das funcionalidades. Mudanças mais estruturais, como a migração para TypeScript, React Query e Vite, foram deixadas para uma futura evolução do projeto.
+
 ## Autor
 
 Desenvolvido por Felipe Cechin
